@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty"> </string>
+    <string name="app_name">Domotic Home</string>
+    <string name="APuerta">Abrir Puerta</string>
+    <string name="CPuerta">Cerrar Puerta</string>
+    <string name="ACortina">Abrir Cortinas</string>
+    <string name="CCortinas">Cerrar Cortinas</string>
+    <string name="EVentilador">Encender Ventilador</string>
+    <string name="AVentilador">Apagar Ventilador</string>
+
+    //              Luces
+    //              Encender
+    <string name="Luz1">Encender\nLuz 1</string>
+    <string name="Luz2">Encender\nLuz 2 </string>
+    <string name="Luz3">Encender\nLuz 3</string>
+    <string name="Apagar">Apagar Luces</string>
+    //              Apagar
+    <string name="ALuz1">Apagar\nLuz 1</string>
+    <string name="ALuz2">Apagar\nLuz 2</string>
+    <string name="ALuz3">Apagar\nLuz 3</string>
+
+    <string name="EAlarma">Encender Alarma</string>
+    <string name="AAlarma">Apagar Alarma</string>
+    <string name="Salir">Salir</string>
+
+    //             Ventilador
+    <string name="SVelocidad">Subir velocidad</string>
+    <string name="BVelocidad">Bajar velocidad</string>
+    <string name="Ajustes">Ajustes</string>
+    <string name="Info">Info</string>
+
+    //              Estados
+    <string name="Estado">Estado de Bluetooth:</string>
+
+    //              Botones
+    <string name="Emparejados">Emparejados</string>
+    <string name="Buscar">Buscar</string>
+    <string name="Vincular">Vincular</string>
+    <string name="Bluetooth">Bluetooth</string>
+
+    //              Info
+    <string name="Fecha"><b>Fecha:</b> 24/06/2019</string>
+    <string name="Autores"><b>Autores:</b> Rocío Seco</string>
+    <string name="Autor2">  Rocío Seco</string>
+    <string name="Descripcion">
+        <b><u>Descripción:</u></b> \"Domotic Home\" fue desarrollada
+        como complemento al proyecto de casa inteligente con Arduino para
+        la E.E.S.T. Nº1 Juan XXIII, Marcos Paz.</string>
+</resources>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/back"
+    android:gravity="center|center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/Puerta"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:onClick="Puerta"
+        android:text="@string/APuerta" />
+
+    <Button
+        android:id="@+id/Persiana"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:onClick="Persiana"
+        android:text="@string/ACortina" />
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/lay_ventilador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/Bajar_vel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/back"
+            android:contentDescription="@string/SVelocidad"
+            android:onClick="bajarVelocidad"
+            app:srcCompat="@drawable/arrow_left_float" />
+
+        <Button
+            android:id="@+id/Ventilador"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="Ventilador"
+            android:text="@string/EVentilador" />
+
+        <ImageButton
+            android:id="@+id/Subir_vel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/back"
+            android:contentDescription="@string/BVelocidad"
+            android:onClick="subirVelocidad"
+            app:srcCompat="@drawable/arrow_right_float" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/lay_luces"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/Luz_1"
+            style="@android:style/Widget.Holo.Light.Button.Toggle"
+            android:layout_width="70dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/Luz1"
+            android:textOn="@string/ALuz1"
+            android:textSize="12sp" />
+
+        <ToggleButton
+            android:id="@+id/Luz_2"
+            style="@android:style/Widget.Holo.Light.Button.Toggle"
+            android:layout_width="70dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/Luz2"
+            android:textOn="@string/ALuz2"
+            android:textSize="12sp" />
+        <!--
+        <ToggleButton
+            android:id="@+id/Luz_3"
+            style="@android:style/Widget.Holo.Light.Button.Toggle"
+            android:layout_width="70dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/Luz3"
+            android:textOn="@string/ALuz3"
+            android:textSize="12sp" />
+            -->
+
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/Luz_3"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:textOff="@string/Luz3"
+        android:textOn="@string/ALuz3"
+        android:textSize="12sp" />
+
+
+    <!--
+    <Button
+        android:id="@+id/Alarma"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:onClick="Alarma"
+        android:text="@string/AAlarma" />
+    -->
+
+
+
+    <LinearLayout
+        android:id="@+id/segundo_layout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/Ajuste"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="75dp"
+            android:background="@color/back"
+            android:contentDescription="@string/Ajustes"
+            android:onClick="ajustes"
+            app:srcCompat="@android:drawable/ic_menu_manage" />
+
+        <ImageButton
+            android:id="@+id/Informacion"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="75dp"
+            android:background="@color/back"
+            android:contentDescription="@string/Info"
+            android:onClick="info"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/Salir"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:onClick="cerrar"
+        android:text="@string/Salir" />
+    <!--
+    <TextView
+        android:id="@+id/Author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:text="@string/autor" />
+    -->
+
+
+</LinearLayout>
