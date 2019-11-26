@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     boolean Vinculado = false;
     String address = null;
     String stPuerta = "Abrir Puerta";
-    String stPersiana = "Levantar Persiana";
+    String stPersiana = "Abrir Cortinas";
     String stVentilador = "Encender Ventilador";
     //String stAlarma = "Encender Alarma";
     Button Puerta, Persiana, Ventilador, Alarma;
