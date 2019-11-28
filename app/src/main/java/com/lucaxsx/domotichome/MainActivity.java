@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -27,29 +28,39 @@ public class MainActivity extends AppCompatActivity {
     String stPuerta = "Abrir Puerta";
     String stPersiana = "Abrir Cortinas";
     String stVentilador = "Encender Ventilador";
-    //String stAlarma = "Encender Alarma";
-    Button Puerta, Persiana, Ventilador, Alarma;
-    ToggleButton Luz1, Luz2, Luz3;
+    Button Puerta, Persiana, Ventilador;
+    ToggleButton luz1, luz2, luz_B, luz_K;
+    ImageButton subirVel, bajarVel;
 
-    //TextView author;
+    TextView author;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Puerta = findViewById(R.id.Puerta);
         Persiana = findViewById(R.id.Persiana);
         Ventilador = findViewById(R.id.Ventilador);
-        //Alarma = findViewById(R.id.Alarma);
-        //author = findViewById(R.id.Author);
+        author = findViewById(R.id.Author);
 
-        Luz1 = findViewById(R.id.Luz_1);
-        Luz2 = findViewById(R.id.Luz_2);
-        Luz3 = findViewById(R.id.Luz_3);
+        subirVel = findViewById(R.id.Subir_vel);
+        bajarVel = findViewById(R.id.Bajar_vel);
 
-        Luz1.setOnClickListener(new Listener());
-        Luz2.setOnClickListener(new Listener());
-        Luz3.setOnClickListener(new Listener());
+        luz1 = findViewById(R.id.Luz_Hab1);
+        luz2 = findViewById(R.id.Luz_Hab2);
+        luz_B = findViewById(R.id.Luz_Bath);
+        luz_K = findViewById(R.id.Luz_Kitch);
+
+        luz1.setOnClickListener(new Listener());
+        luz2.setOnClickListener(new Listener());
+        luz_B.setOnClickListener(new Listener());
+        luz_K.setOnClickListener(new Listener());
+
+        subirVel.setOnLongClickListener(new LongListener());
+        bajarVel.setOnLongClickListener(new LongListener());
+
     }
 
     //          Botones
@@ -59,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             String buff = (String) Puerta.getText();
             if (buff.equalsIgnoreCase(stPuerta)) {
                 Puerta.setText(R.string.CPuerta);
-                MiConexionBT.write("1");
+                MiConexionBT.write("P");
             } else {
                 Puerta.setText(R.string.APuerta);
                 MiConexionBT.write("P");
@@ -72,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             String buff = (String) Persiana.getText();
             if (buff.equalsIgnoreCase(stPersiana)) {
                 Persiana.setText(R.string.CCortinas);
-                MiConexionBT.write("2");
+                MiConexionBT.write("C");
             } else {
                 Persiana.setText(R.string.ACortina);
                 MiConexionBT.write("C");
@@ -83,13 +94,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void subirVelocidad(View vista){
         if(estaConectado()){
-            MiConexionBT.write("6");
+            MiConexionBT.write("+");
         }
     }
 
     public void bajarVelocidad(View vista){
         if(estaConectado()){
-            MiConexionBT.write("4");
+            MiConexionBT.write("-");
         }
     }
 
@@ -98,10 +109,10 @@ public class MainActivity extends AppCompatActivity {
             String buff = (String) Ventilador.getText();
             if (buff.equalsIgnoreCase(stVentilador)) {
                 Ventilador.setText(R.string.AVentilador);
-                MiConexionBT.write("5");
+                MiConexionBT.write("V");
             } else {
                 Ventilador.setText(R.string.EVentilador);
-                MiConexionBT.write("5");
+                MiConexionBT.write("V");
             }
         }
     }
@@ -113,38 +124,36 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
                 switch (v.getId()) {
-                    case R.id.Luz_1:
+                    case R.id.Luz_Hab1:
                         if(estaConectado()){
-                            if (Luz1.isChecked()) {
-                                MiConexionBT.write("7");
-                            } else {
-                                MiConexionBT.write("X");
-                            }
+                            MiConexionBT.write("1");
                         }else{
-                            Luz1.setChecked(false);
+                            luz1.setChecked(false);
                         }
                         break;
-                    case R.id.Luz_2:
+                    case R.id.Luz_Hab2:
                         if (estaConectado()) {
-                        if (Luz2.isChecked()) {
-                                MiConexionBT.write("8");
-                            } else {
-                                MiConexionBT.write("Y");
+                            if (luz2.isChecked()) {
+                                MiConexionBT.write("2");
                             }
                         }else{
-                            Luz2.setChecked(false);
+                            luz2.setChecked(false);
                         }
                         break;
-                    case R.id.Luz_3:
+                    case R.id.Luz_Bath:
                         if (estaConectado()) {
-                            if (Luz3.isChecked()) {
-
-                                MiConexionBT.write("9");
-                            } else {
-                                MiConexionBT.write("Z");
+                            MiConexionBT.write("B");
+                        }else{
+                            luz_B.setChecked(false);
+                        }
+                        break;
+                    case R.id.Luz_Kitch:
+                        if (estaConectado()) {
+                            if (luz_K.isChecked()) {
+                                MiConexionBT.write("K");
                             }
                         }else{
-                            Luz3.setChecked(false);
+                            luz_K.setChecked(false);
                         }
                         break;
                     default:
@@ -154,19 +163,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    class LongListener implements View.OnLongClickListener{
 
-/*
-    public void Alarma(View vista){
-        if(estaConectado()) {
-            String buff = (String) Alarma.getText();
-            if (buff.equalsIgnoreCase(stAlarma)) {
-                Alarma.setText(R.string.AAlarma);
-            } else {
-                Alarma.setText(R.string.EAlarma);
+        @Override
+        public boolean onLongClick(View v){
+            if(v.getId() == R.id.Bajar_vel){
+                Toast.makeText(getBaseContext(), R.string.BVelocidad, Toast.LENGTH_SHORT).show();
+                return true;
             }
+            if (v.getId() == R.id.Subir_vel){
+                Toast.makeText(getBaseContext(), R.string.SVelocidad, Toast.LENGTH_SHORT).show();
+                return true;
+            }
+            return false;
         }
     }
-*/
+
     public void info(View vista){
         Intent info = new Intent (this, info.class);
         startActivity(info);

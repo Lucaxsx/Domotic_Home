@@ -14,8 +14,8 @@
 
     <ImageView
         android:id="@+id/titulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="277dp"
+        android:layout_height="98dp"
         android:contentDescription="@string/app_name"
         app:srcCompat="@drawable/logo" />
 
@@ -76,72 +76,70 @@
 
 
 
-
-
-
-
     <LinearLayout
-        android:id="@+id/lay_luces"
+        android:id="@+id/Luces_Arriba"
         android:layout_width="245dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal">
 
         <ToggleButton
-            android:id="@+id/Luz_1"
+            android:id="@+id/Luz_Hab1"
             style="@android:style/Widget.Holo.Light.Button.Toggle"
             android:layout_width="70dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:checked="false"
             android:textOff="@string/Luz1"
-            android:textOn="@string/ALuz1"
+            android:textOn="@string/Luz1"
             android:textSize="12sp" />
 
         <ToggleButton
-            android:id="@+id/Luz_2"
+            android:id="@+id/Luz_Hab2"
             style="@android:style/Widget.Holo.Light.Button.Toggle"
             android:layout_width="70dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:checked="false"
             android:textOff="@string/Luz2"
-            android:textOn="@string/ALuz2"
+            android:textOn="@string/Luz2"
             android:textSize="12sp" />
-        <!--
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Luces_Abajo"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <ToggleButton
-            android:id="@+id/Luz_3"
+            android:id="@+id/Luz_Kitch"
             style="@android:style/Widget.Holo.Light.Button.Toggle"
             android:layout_width="70dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:checked="false"
-            android:textOff="@string/Luz3"
-            android:textOn="@string/ALuz3"
+            android:textOff="@string/Luz_B"
+            android:textOn="@string/Luz_B"
             android:textSize="12sp" />
-            -->
+
+        <ToggleButton
+            android:id="@+id/Luz_Bath"
+            style="@android:style/Widget.Holo.Light.Button.Toggle"
+            android:layout_width="70dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/Luz_K"
+            android:textOn="@string/Luz_K"
+            android:textSize="12sp" />
+
 
     </LinearLayout>
 
-    <ToggleButton
-        android:id="@+id/Luz_3"
-        style="@android:style/Widget.Holo.Light.Button.Toggle"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:textOff="@string/Luz3"
-        android:textOn="@string/ALuz3"
-        android:textSize="12sp" />
-
-
-    <!--
-    <Button
-        android:id="@+id/Alarma"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:onClick="Alarma"
-        android:text="@string/AAlarma" />
-    -->
 
 
 
@@ -176,25 +174,20 @@
     </LinearLayout>
 
 
-
-
-
-
-
     <Button
         android:id="@+id/Salir"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:onClick="cerrar"
         android:text="@string/Salir" />
-    <!--
+
     <TextView
         android:id="@+id/Author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:text="@string/autor" />
-    -->
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/Autor2" />
 
 
 </LinearLayout>

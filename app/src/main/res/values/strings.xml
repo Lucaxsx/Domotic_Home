@@ -11,22 +11,17 @@
 
     //              Luces
     //              Encender
-    <string name="Luz1">Encender\nLuz 1</string>
-    <string name="Luz2">Encender\nLuz 2 </string>
-    <string name="Luz3">Encender\nLuz 3</string>
+    <string name="Luz1">Habitación Izquierda</string>
+    <string name="Luz2">Habitación Derecha</string>
+    <string name="Luz_B">Baño</string>
+    <string name="Luz_K">Cocina</string>
     <string name="Apagar">Apagar Luces</string>
-    //              Apagar
-    <string name="ALuz1">Apagar\nLuz 1</string>
-    <string name="ALuz2">Apagar\nLuz 2</string>
-    <string name="ALuz3">Apagar\nLuz 3</string>
 
-    <string name="EAlarma">Encender Alarma</string>
-    <string name="AAlarma">Apagar Alarma</string>
     <string name="Salir">Salir</string>
 
     //             Ventilador
-    <string name="SVelocidad">Subir velocidad</string>
-    <string name="BVelocidad">Bajar velocidad</string>
+    <string name="SVelocidad">Subir velocidad del ventilador</string>
+    <string name="BVelocidad">Bajar velocidad del ventilador</string>
     <string name="Ajustes">Ajustes</string>
     <string name="Info">Info</string>
 
@@ -41,10 +36,10 @@
 
     //              Info
     <string name="Fecha"><b>Fecha:</b> 24/06/2019</string>
-    <string name="Autores"><b>Autores:</b> Rocío Seco</string>
-    <string name="Autor2">  Rocío Seco</string>
+    <string name="Autores"><b>Autor:</b> Santillan Lucas</string>
+    <string name="Autor2">  Santillan Lucas</string>
     <string name="Descripcion">
         <b><u>Descripción:</u></b> \"Domotic Home\" fue desarrollada
-        como complemento al proyecto de casa inteligente con Arduino para
+        como complemento para al proyecto de Domótica con Arduino para
         la E.E.S.T. Nº1 Juan XXIII, Marcos Paz.</string>
 </resources>
